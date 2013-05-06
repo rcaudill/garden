@@ -44,9 +44,7 @@ while true do
 
     if average < 900 then
       puts "watering"
-      sp.write "15000"
-    else 
-      puts "no watering required"
+      sp.write "10000"
     end
   end
 
