@@ -24,13 +24,15 @@ while true do
   start = Time.now
   puts "Start: #{start}"
   a = Array.new
-  while i=sp.gets.chomp do
+  while i=sp.gets do
     puts i
-    if !i.nil? and i!="" and (1..1024).member?(i.to_i) then
-      a.push(i.to_i)
-    end
-    if Time.now - start > 30 then
-      break
+    if !i.nil? then
+      if i!="" and (1..1024).member?(i.to_i) then
+        a.push(i.to_i)
+      end
+      if Time.now - start > 30 then
+        break
+      end
     end
   end
   if a.length > 20 then
