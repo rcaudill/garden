@@ -3,7 +3,7 @@ class GraphController < ApplicationController
   # GET /readings.json
   def index
     @readings = Reading.all
-    @current = @readings.last.reading
+    @current = @readings.last
    
     @json="["
     @readings.each do |x|
