@@ -5,15 +5,7 @@ class GraphController < ApplicationController
     @readings = Reading.all
     @current = @readings.last
    
-    @json="["
-    @readings.each do |x|
-      s = x.time_stamp.to_i.to_s
-      s << "000"
-      # s[8]="0"
-      # s[9]="0"
-      @json += "[#{s},#{x.reading}],"
-    end
-    @json=@json[0..-2]+"]"
+    @json = "[" + @readings.map { |i| "[" + "%d000"%i.time_stamp.to_i + "," + i.reading.to_s + "]" }.join(",") + "]"
 
     respond_to do |format|
       format.html # index.html.erb
