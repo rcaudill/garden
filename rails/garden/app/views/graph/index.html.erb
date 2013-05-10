@@ -108,30 +108,31 @@ var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
 $(function() {
 		$('#container').highcharts('StockChart', {
 			rangeSelector : {
-buttons: [{
-	type: 'minute',
-	count: 60,
-	text: '1h'
-}, {
-	type: 'minute',
-	count: 720,
-	text: '12h'
-}, {
-	type: 'day',
-	count: 1,
-	text: '1d'
-}, {
-	type: 'day',
-	count: 7,
-	text: '1w'
-}, {
-	type: 'month',
-	count: 1,
-	text: '1m'
-}, {
-	type: 'all',
-	text: 'All'
-}]
+				buttons: [{
+					type: 'minute',
+					count: 60,
+					text: '1h'
+				}, {
+					type: 'minute',
+					count: 720,
+					text: '12h'
+				}, {
+					type: 'day',
+					count: 1,
+					text: '1d'
+				}, {
+					type: 'day',
+					count: 7,
+					text: '1w'
+				}, {
+					type: 'month',
+					count: 1,
+					text: '1m'
+				}, {
+					type: 'all',
+					text: 'All'
+				}],
+				selected: 3
 			},
 			title : {
 				text : 'Moisture'
